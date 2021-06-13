@@ -5,7 +5,7 @@ const io = require("socket.io")(server,{
     origin:"*",
   }
 });
-const port = 2255 || process.env.PORT;
+const port = 2255 ;
 
 io.on('connection',(client)=>{
   console.log("connection establish");
