@@ -11,15 +11,15 @@ const onlineUser = [];
 io.on('connection',(client)=>{
   console.log("connection establish",client.id);
 
-  /* online user */
-  client.on('onlineActive',(online)=>{
-    /* push the user to the array */
-    onlineUser.push(online);
-    /* send online user list to the client */
-    client.broadcast.emit('activeUser',onlineUser);
+  // /* online user */
+  // client.on('onlineActive',(online)=>{
+  //   /* push the user to the array */
+  //   onlineUser.push(online);
+  //   /* send online user list to the client */
+  //   client.broadcast.emit('activeUser',onlineUser);
 
-    console.log(client.id,online);
-  })
+  //   console.log(client.id,online);
+  // })
 
   /* console.log(client) */
   client.on("fromclient",(data)=>{
